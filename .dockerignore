@@ -1,9 +1,7 @@
-.idea
-__pycache__
-.ipynb_checkpoints
 *.mp4
 *.wav
 myoutput1
 myoutput2
 pretrained_models
 venv
+*.ipynb

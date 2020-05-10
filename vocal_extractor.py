@@ -1,11 +1,9 @@
 from pytube import YouTube
 import subprocess
-import pandas as pd
-import numpy as np
 from tqdm import tqdm
 from datetime import timedelta
 from moviepy.video.io.VideoFileClip import VideoFileClip
-from subprocess import Popen, PIPE, STDOUT
+from subprocess import PIPE
 
 
 def download_video(source):
@@ -29,7 +27,7 @@ def video_attrs():
     """
     seconds = int(VideoFileClip("video.mp4").duration)
     duration_of_video = timedelta(seconds=seconds)
-    if seconds >= 3600 and seconds < 36000:
+    if 3600 <= seconds < 36000:
         duration_of_video = '0' + str(duration_of_video)
     elif seconds >= 36000:
         duration_of_video = str(duration_of_video)[-8:]
